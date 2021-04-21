@@ -1,4 +1,4 @@
-# QR_promtpat_test
+# QR_promtpy_test
 
 
 just use for test
