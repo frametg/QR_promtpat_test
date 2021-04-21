@@ -1,4 +1,4 @@
-# QR_promtpy_test
+# QR_promtpay_test
 
 
 just use for test
