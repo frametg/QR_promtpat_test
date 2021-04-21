@@ -2,9 +2,9 @@ const generatePayload = require('promptpay-qr')
 const qrcode = require('qrcode') 
 const fs = require('fs') 
 
-//const mobileNumber = '000-000-0000'
+const mobileNumber = '000-000-0000'
 
-const mobileNumber = '091-8358-231' 
+
 const IDCardNumber = '0-0000-00000-00-0'
 const amount = 0
 const payload = generatePayload(mobileNumber, { amount }) //First parameter : mobileNumber || IDCardNumber
