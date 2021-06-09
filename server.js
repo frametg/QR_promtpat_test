@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
-
+var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
+var server_host = process.env.YOUR_HOST || '0.0.0.0';
 app.get('/', (req, res) => {
   res.send('Hello World')
 })
@@ -38,6 +39,6 @@ app.post('/scb/payment/confirm', (req, res) => {
     console.log(req.body.body)
   })
 
-app.listen(3000, () => {
-  console.log('Start server at port 3000.')
+app.listen(server_port , () => {
+  console.log('Listening on port %d', server_port);
 })
