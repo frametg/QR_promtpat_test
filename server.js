@@ -37,6 +37,7 @@ app.post('/scb/payment/confirm', (req, res) => {
     // req, circularReplacer()))
     //res.send(res)
     console.log(req.body.body)
+    res.send(req.body.body)
   })
 
 app.listen(server_port , () => {
