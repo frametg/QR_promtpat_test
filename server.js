@@ -3,7 +3,9 @@ const app = express()
 var server_port = process.env.YOUR_PORT || process.env.PORT || 3000;
 var server_host = process.env.YOUR_HOST || '0.0.0.0';
 app.get('/', (req, res) => {
+  console.log("hello")
   res.send('Hello World')
+  
 })
 const circularReplacer = () => {
   
@@ -36,6 +38,7 @@ app.post('/scb/payment/confirm', (req, res) => {
     //console.log(JSON.stringify(
     // req, circularReplacer()))
     //res.send(res)
+    console.log("accept bill")
     console.log(req.body)
     res.send(req.body)
   })
