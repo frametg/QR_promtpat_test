@@ -40,7 +40,7 @@ app.post('/scb/payment/confirm', (req, res) => {
     //res.send(res)
     console.log("accept bill")
     
-    console.log("req1: "+JSON.parse(res))
+    console.log("res: "+JSON.parse(res))
     console.log("req: "+JSON.parse(req ))
     
     res.send(req.body)
