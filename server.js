@@ -39,7 +39,7 @@ app.post('/scb/payment/confirm', (req, res) => {
     // req, circularReplacer()))
     //res.send(res)
     console.log("accept bill")
-    console.log("req: "+JSON.parse(response.config.data).response )
+    console.log("req: "+JSON.parse(req.config.data).req )
     
     res.send(req.body)
   })
