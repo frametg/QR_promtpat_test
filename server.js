@@ -34,7 +34,7 @@ const circularReplacer = () => {
    };
 };
 
-app.post('/scb/payment/confirm', (req) => {
+app.post('/scb/payment/confirm', (req,res) => {
     //console.log(JSON.stringify(
     // req, circularReplacer()))
     //res.send(res)
