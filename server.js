@@ -34,16 +34,16 @@ const circularReplacer = () => {
    };
 };
 
-app.post('/scb/payment/confirm', (req, res) => {
+app.post('/scb/payment/confirm', (events) => {
     //console.log(JSON.stringify(
     // req, circularReplacer()))
     //res.send(res)
     console.log("accept bill")
-    console.log("res: "+JSON.stringify(res.event))
+    console.log("res: "+JSON.stringify(events))
     //console.log("res: "+JSON.stringify(res, circularReplacer()))
     //console.log("req: "+JSON.stringify(req ))
     
-    res.send(req.body)
+    
   })
 
 app.listen(server_port , () => {
