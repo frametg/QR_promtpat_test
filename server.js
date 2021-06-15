@@ -34,13 +34,13 @@ const circularReplacer = () => {
    };
 };
 
-app.post('/scb/payment/confirm', (events) => {
+app.post('/scb/payment/confirm', (req) => {
     //console.log(JSON.stringify(
     // req, circularReplacer()))
     //res.send(res)
     console.log("accept bill")
 
-    console.log("events: "+ JSON.parse(events.config.data).events )
+    console.log("req: "+ JSON.stringify(req.body))
     //console.log("res: "+JSON.stringify(events, circularReplacer() ) )
     //console.log("res: "+JSON.stringify(res, circularReplacer()))
     //console.log("req: "+JSON.stringify(req ))
