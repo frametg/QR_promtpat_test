@@ -58,7 +58,7 @@ app.post('/scb/payment/confirm', (req,res) => {
     //console.log("res: "+JSON.stringify(events, circularReplacer() ) )
     //console.log("res: "+JSON.stringify(res, circularReplacer()))
     //console.log("req: "+JSON.stringify(req ))
-     if(res)res.json("success")
+     if(req)res.json("success")
     
   })
 
