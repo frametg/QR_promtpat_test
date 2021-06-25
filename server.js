@@ -17,6 +17,7 @@ app.get('/', (req, res) => {
   console.log("hello")
   //res.send('Hello World')
   res.json('Hello World')
+  res.end;
   
 })
 const circularReplacer = () => {
