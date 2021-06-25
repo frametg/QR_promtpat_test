@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
   console.log("hello")
   //res.send('Hello World')
   res.json('Hello World')
-  res.end;
+  
   
 })
 const circularReplacer = () => {
@@ -58,10 +58,11 @@ app.post('/scb/payment/confirm', (req,res) => {
     //console.log("res: "+JSON.stringify(events, circularReplacer() ) )
     //console.log("res: "+JSON.stringify(res, circularReplacer()))
     //console.log("req: "+JSON.stringify(req ))
-    
+     if(res)res.json("success")
     
   })
 
 app.listen(server_port , () => {
   console.log('Listening on port %d', server_port);
+
 })
