@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
+const athenscb = require('./athenscb.js')
 
 
 
@@ -16,7 +17,7 @@ app.use(bodyParser.urlencoded({
 app.get('/', (req, res) => {
   console.log("hello")
   //res.send('Hello World')
-  res.json('Hello World')
+  athenscb
   
   
 })
