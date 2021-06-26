@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
   console.log("hello")
   //res.send('Hello World')
   athenscb
+  res.json(athenscb)
   
   
 })
