@@ -3,7 +3,7 @@ const qrcode = require('qrcode')
 const fs = require('fs') 
 
 const mobileNumber = '000-000-0000'
-
+//d
 
 const IDCardNumber = '0-0000-00000-00-0'
 const amount = 0
