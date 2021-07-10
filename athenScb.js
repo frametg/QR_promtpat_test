@@ -17,10 +17,20 @@ var config = {
   data : data
 };
 
+const athenData = [];  
+const populateData = (data) => {athenData.push(data)} 
+
 axios(config)
-.then(function (response) {
-  console.log(JSON.stringify(response.data));
-})
-.catch(function (error) {
-  console.log(error);
-});
+    .then(function (response) {
+      console.log(JSON.stringify(response.data));
+      populateData(response.data);
+      //return response.data
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+module.exports ={
+  athenData,
+  config
+}
