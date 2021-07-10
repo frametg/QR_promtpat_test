@@ -2,12 +2,12 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const athenscb = require('./athenScb.js')
-
-
+//const requestGenerateQr = require('./requestGenerateQr.js')
+import * as requestGenerateQr  from './requestGenerateQr.js'
 
 var server_port = process.env.YOUR_PORT || process.env.PORT || 3000;
 var server_host = process.env.YOUR_HOST || '0.0.0.0';
-
+//process.env.accessToken = athenscb.athenData[0].data.accessToken;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -15,13 +15,31 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.get('/', (req, res) => {
-  console.log("hello")
-  //res.send('Hello World')
-  athenscb
-  res.json(athenscb)
+  //athenscb.config.headers["resourceOwnerId"] = ""
+  //console.log(athenscb.config.headers["resourceOwnerId"])
   
+  //get access token
+  process.env.accessToken = athenscb.athenData[0].data.accessToken;
   
+ 
+  
+  res.json("accessToken :"+athenscb.athenData[0].data.accessToken 
+  ) 
+
 })
+app.get('/qr', (req, res) => {
+  //athenscb.config.headers["resourceOwnerId"] = ""
+  //console.log(athenscb.config.headers["resourceOwnerId"])
+  
+  //get access token
+  
+  
+  console.log(process.env.accessToken)
+  console.log(requestGenerateQr.qrData)
+  res.json("qr:"+requestGenerateQr.qrData[0].data.qrRawData) 
+
+})
+
 const circularReplacer = () => {
   
     // Creating new WeakSet to keep 
