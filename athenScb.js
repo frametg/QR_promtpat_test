@@ -1,4 +1,5 @@
-var axios = require('axios');
+
+import axios from 'axios';
 var data = JSON.stringify({
   "applicationKey": "l73439963f8009445c8327351cd8241b5d",
   "applicationSecret": "22d9c2664c3842fca0d71963bfb37d25"
@@ -30,7 +31,7 @@ axios(config)
       console.log(error);
     });
 
-module.exports ={
+export {
   athenData,
   config
 }

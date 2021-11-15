@@ -1,7 +1,9 @@
-const express = require('express')
+import express from 'express'
 const app = express()
-const bodyParser = require('body-parser')
-const athenscb = require('./athenScb.js')
+
+import bodyParser from 'body-parser'
+//const athenscb = require('./athenScb.js')
+import * as athenScb from './athenScb.js'
 //const requestGenerateQr = require('./requestGenerateQr.js')
 import * as requestGenerateQr  from './requestGenerateQr.js'
 

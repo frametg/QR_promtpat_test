@@ -1,4 +1,5 @@
-var axios = require('axios');
+
+import axios  from 'axios';
 var data = JSON.stringify({
   "qrType": "PP",
   "ppType": "BILLERID",
@@ -9,7 +10,7 @@ var data = JSON.stringify({
   "ref3": "SRU1235"
 });
 
-export var config = {
+var config = {
   method: 'post',
   url: 'https://api-sandbox.partners.scb/partners/sandbox/v1/payment/qrcode/create',
   headers: { 
@@ -23,9 +24,9 @@ export var config = {
 };
 
 
-export const qrData = [];  
+const qrData = [];  
 const populateData = (data) => {qrData.push(data)} 
-export function axios(){
+function useAxios(){
   axios(config)
   .then(function (response) {
     //console.log(JSON.stringify(response.data));
@@ -38,7 +39,8 @@ export function axios(){
 } 
 
 
-module.exports ={
+export  {
+  useAxios,
     qrData,
   config
 }
